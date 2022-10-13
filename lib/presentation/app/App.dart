@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:poc_flutter/domain/login/login_bloc.dart';
 import 'package:poc_flutter/presentation/page/LoginPage.dart';
 
 class App extends StatelessWidget {
@@ -6,12 +8,17 @@ class App extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'POC Flutter',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<LoginBloc>(create: (_) => LoginBloc()),
+      ],
+      child: MaterialApp(
+        title: 'POC Flutter',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const LoginPage(),
       ),
-      home: const LoginPage(),
     );
   }
 }
