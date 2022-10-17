@@ -1,0 +1,4 @@
+enum NavbarScreen {
+  reader,
+  expenses
+}

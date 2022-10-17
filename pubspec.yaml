@@ -11,8 +11,9 @@ dependencies:
   flutter_bloc: ^8.1.1
   flutter:
     sdk: flutter
-  
+
   cupertino_icons: ^1.0.2
+  formz: ^0.4.1
 
 dev_dependencies:
   flutter_test:
