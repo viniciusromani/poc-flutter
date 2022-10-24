@@ -1,4 +1,4 @@
 enum NavbarScreen {
-  reader,
-  expenses
+  products,
+  profile
 }

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:poc_flutter/presentation/widget/navbar.dart';
 
-class ExpensesPage extends StatelessWidget {
-  const ExpensesPage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +10,7 @@ class ExpensesPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: const <Widget>[
           Text(
-            'Welcome to the expenses page',
+            'Welcome to the reader page',
           ),
         ],
       ),

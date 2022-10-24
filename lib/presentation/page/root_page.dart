@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:poc_flutter/data/model/navbar_screen.dart';
 import 'package:poc_flutter/domain/navbar/navbar_bloc.dart';
-import 'package:poc_flutter/presentation/page/expenses_page.dart';
-import 'package:poc_flutter/presentation/page/reader_page.dart';
+import 'package:poc_flutter/presentation/page/products_page.dart';
+import 'package:poc_flutter/presentation/page/profile_page.dart';
 import 'package:poc_flutter/presentation/widget/navbar.dart';
 
 class RootPage extends StatelessWidget {
@@ -15,16 +15,16 @@ class RootPage extends StatelessWidget {
       buildWhen: 
         (previous, current) => previous.screen != current.screen,
       builder: (context, state) {
-        if (state.screen == NavbarScreen.reader) {
+        if (state.screen == NavbarScreen.products) {
           return const Scaffold(
             bottomNavigationBar: AppNavigationBar(),
-            body: ReaderPage(),
+            body: ProductsPage(),
           );
         }
-        if (state.screen == NavbarScreen.expenses) {
+        if (state.screen == NavbarScreen.profile) {
           return const Scaffold(
             bottomNavigationBar: AppNavigationBar(),
-            body: ExpensesPage(),
+            body: ProfilePage(),
           );
         }
         throw 'something went wrong';
