@@ -17,14 +17,26 @@ abstract class HorizontalGalleryWidget<T extends HorizontalGalleryItem> extends 
 }
 
 class HorizontalGallery extends StatelessWidget {
-  final String title;
+  final String? title;
   final List<HorizontalGalleryWidget> items;
 
   const HorizontalGallery({
     super.key, 
-    required this.title,
+    this.title,
     required this.items
   });
+
+  Widget titledHeader(BuildContext context) {
+    return Column(
+      children: [
+        Text(
+          title!,
+          style: Theme.of(context).textTheme.titleSmall,
+        ),
+        const SizedBox(height: 12)
+      ],
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,11 +46,8 @@ class HorizontalGallery extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,    
-            style: Theme.of(context).textTheme.titleSmall,
-          ),
-          const SizedBox(height: 12),
+          if (title != null)
+            titledHeader(context),
           SizedBox(
             height: 100,
             child: ListView(

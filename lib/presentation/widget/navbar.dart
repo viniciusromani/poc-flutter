@@ -16,12 +16,12 @@ class AppNavigationBar extends StatelessWidget {
           selectedIndex: state.screen.index,
           destinations: const <Widget>[
             NavigationDestination(
-              icon: Icon(Icons.camera), 
-              label: 'Reader',
+              icon: Icon(Icons.gif_box),
+              label: 'Produtos',
             ),
             NavigationDestination(
-              icon: Icon(Icons.graphic_eq), 
-              label: 'Despesas'
+              icon: Icon(Icons.verified_user), 
+              label: 'Perfil'
             ),
           ],
           onDestinationSelected: 
