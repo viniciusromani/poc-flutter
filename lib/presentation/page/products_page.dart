@@ -33,10 +33,8 @@ class ProductsPage extends StatelessWidget {
               title: 'Categoria',
               items: [
                 CategoryGalleryCard(
-                  item: HorizontalGalleryItem(
-                    picture: '', 
-                    title: 'Item'
-                  )
+                  picture: '', 
+                  title: 'Item'
                 )
               ],
             )

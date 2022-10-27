@@ -4,16 +4,16 @@ class HorizontalGalleryItem {
   final String picture;
   final String title;
 
-  HorizontalGalleryItem({
-    required this.picture, 
-    required this.title
-  });
+  HorizontalGalleryItem(
+    this.picture, 
+    this.title
+  );
 }
 
 /// It should not be visible since it can only extensible via inheritance
 abstract class HorizontalGalleryWidget<T extends HorizontalGalleryItem> extends StatelessWidget {
   final T item;
-  const HorizontalGalleryWidget({super.key, required this.item});
+  const HorizontalGalleryWidget(this.item, {super.key});
 }
 
 class HorizontalGallery extends StatelessWidget {
@@ -35,7 +35,7 @@ class HorizontalGallery extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            title,
+            title,    
             style: Theme.of(context).textTheme.titleSmall,
           ),
           const SizedBox(height: 12),

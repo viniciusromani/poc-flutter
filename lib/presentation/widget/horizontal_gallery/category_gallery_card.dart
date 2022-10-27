@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'horizontal_gallery.dart';
 
 class CategoryGalleryCard extends HorizontalGalleryWidget {
-  const CategoryGalleryCard({
-    super.key, 
-    required super.item
-  });
+  CategoryGalleryCard({
+    required String picture,
+    required String title,
+    super.key
+  }): super(HorizontalGalleryItem(picture, title));
 
   @override
   Widget build(BuildContext context) {
