@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:poc_flutter/presentation/widget/horizontal_gallery.dart';
+import 'package:poc_flutter/presentation/widget/horizontal_gallery/index.dart';
 
 class ProductsPage extends StatelessWidget {
   const ProductsPage({super.key});
@@ -29,7 +29,17 @@ class ProductsPage extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 36),
-            const HorizontalGallery()
+            HorizontalGallery(
+              title: 'Categoria',
+              items: [
+                CategoryGalleryCard(
+                  item: HorizontalGalleryItem(
+                    picture: '', 
+                    title: 'Item'
+                  )
+                )
+              ],
+            )
           ],
         )
       ),
